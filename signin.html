@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+	<title>log in or sign up</title>
+	<style>
+
+#fill
+{
+    position: relative;
+	top:80px;
+	width:100%;
+	height:1200px;
+	font-size:50px;
+	background-color: rgba(204, 245, 255,0.4);
+	border:5px double #6e3722;
+	border-radius: 15px;
+}
+#out
+{
+position:fixed;
+top:100px;
+left:100px;
+width:400px;
+height:400px;
+background-color:black;
+border:0px solid white;
+border-radius:200px;
+}
+#out img
+{
+width:300px;
+height:300px;
+position:fixed;
+top:150px;
+left:150px;
+border:0px solid white;
+border-radius:200px;
+}
+#welcome
+{
+width:100%;
+background-color:white;
+border-radius:10px 10px 0px 0px;
+text-align:center;
+}
+
+.input
+{
+	position:relative;
+	left:30px;
+	font-size:50pt;
+}
+label
+{
+		padding-left: 5px;
+
+}
+input
+{
+	border-radius: 10px;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+#i1,#i2,#i3,#i4
+{
+    width: 600px;
+	height: 45px;
+	border: 1px solid #d4d4d4;
+	border-radius: 27px;
+	box-shadow:1px 1px 5px 1px #c5c7c9;
+font-size:50px;
+}
+#submit
+{
+	position:absolute;
+	top: 1100px;
+	left:10px;
+    width:200px;
+    height:70px;
+    border:1px solid yellow;
+    background-color: yellow;
+	color: black;
+	border-radius:17px;
+	font-size:50px;
+	box-shadow:inset 0px -5px 2px #ffb300;
+}
+#submit2
+{
+	position:absolute;
+	top: 1100px;
+	left:500px;
+    width:200px;
+    height:70px;
+    border:1px solid yellow;
+    background-color: yellow;
+	color: black;
+	border-radius:17px;
+	font-size:50px;
+	box-shadow:inset 0px -5px 2px #ffb300;
+}
+#submit:hover
+{
+position:absolute;
+	top:1101px;
+	box-shadow:inset 0px -3px 2px #ffb300;
+}
+#submit:active
+{
+position:absolute;
+	top:1103px;
+	box-shadow:inset 0px -0px #ffb300;
+}
+#submit2:hover
+{
+position:absolute;
+	top:1101px;
+	box-shadow:inset 0px -3px 2px #ffb300;
+}
+#submit2:active
+{
+position:absolute;
+	top:1103px;
+	box-shadow:inset 0px -0px #ffb300;
+}
+body
+{
+	background-image:url('https://i.postimg.cc/hGQhQ6Yt/back2.jpg');
+	background-repeat:no-repeat;
+background-size:cover;
+background-size:1000px 1750px;
+padding:10% 10% 10% 10%;
+overflow: auto;
+
+}
+<!--#full-->
+<!--{-->
+<!--overflow:scroll;-->
+<!--}-->
+	</style>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<div id="full"  align="right">
+	<div id="out">
+		<img src="https://i.postimg.cc/HLKN369n/time.jpg"></div>
+<div id="fill" align="left">
+
+	<div id="welcome">
+		<img src="https://i.postimg.cc/CK5m5XFc/date.gif" width="300"></div>
+	<form  id='login' action="https://angelfrancis.pythonanywhere.com/login" method="POST">
+		<div class="input" style="	top: 50px;">
+		<label for="i1">Username</label><br><br>
+		<input type="text"  id='i1' name="username" required></div><br><br>
+		<div class="input" style="	top: 50px;">
+		<label for="i2" >Password</label><br><br>
+		<input type="password"  id="i2" name="password" required></div><br><br>
+		<input type="submit" onclick="" value="Login" id="submit"name="Login">
+	</form>
+			<script>{{e | safe}}function password_mismatch()
+		{
+        $('#msg').html('* Passwords doesnt match');
+		}
+function go_to_signup()
+{
+    signup();
+// $('#login').attr('action','https://angelfrancis.pythonanywhere.com/signup');
+// 		$('#login').html('<div class="input"><label for="email">Email</label><br><input type="email" id="i1" name="email" required></div><br><div class="input"><label for="username">Username</label><br><input type="text" id="i2" name="username" pattern="[^ ]+" title="NO white spaces" required></div><br><div class="input"><label for="password">Password</label><br><input type="password"  id="i3" name="password" pattern=".{5,}" title="More than 5 characters" required></div><br><div class="input"><label for="rpassword">Repeat Password</label><br><input type="password"  id="i4" name="rpassword" required><p id="msg" style="color:red;font-size:30px"></p></div><input type="submit"  value="Signup" id="submit" name="Login">');
+// 	<!--pattern=.{5,}==more than 5 characters,,(?=.*/d)==numbers must,(?=.*[a-z])(?=.*[A-Z])==must small and capital letter,-->
+// 	$('#submit2').html('Login');
+// 	$('#submit2').text('Login');
+
+		$('#submit2').attr('onclick','login();');
+	}
+</script>
+	<button id="submit2" value='Signup' onclick="signup();">SignUp</button><br></div>
+
+	<script>
+		function signup()
+		{
+		$('#login').attr('action','https://angelfrancis.pythonanywhere.com/signup');
+		$('#login').html('<div class="input"><label for="email">Email</label><br><input type="email" id="i1" name="email" required></div><br><div class="input"><label for="username">Username</label><br><input type="text" id="i2" name="username" pattern="[^ ]+" title="NO white spaces" required></div><br><div class="input"><label for="password">Password</label><br><input type="password"  id="i3" name="password" pattern=".{5,}" title="More than 5 characters" required></div><br><div class="input"><label for="rpassword">Repeat Password</label><br><input type="password"  id="i4" name="rpassword" required><p id="msg" style="color:red;font-size:30px"></p></div><input type="submit"  value="Signup" id="submit" name="Login">');
+		$('#submit2').html('Login');
+		$('#submit2').attr('onclick','login();');
+		};
+function login()
+{
+		$('#login').attr('action','https://angelfrancis.pythonanywhere.com/login');
+		$('#login').html('<div class="input" style="	top: 50px;"><label for="username">Username</label><br><br><input type="text" id="i1" name="username" required></div><br><br><div class="input" style="	top: 50px;"><label for="password">Password</label><br><br><input type="password"  id="i2" name="password" required></div><br><br><input type="submit" onclick="" value="Login" id="submit"name="Login">');
+$('#submit2').html('SignUp');
+		$('#submit2').attr('onclick','signup();');
+};
+		$(window).resize( function()
+{
+if($(window).width()<1000)
+	$('#out').hide();
+else
+	$('#out').show();
+});
+	$(document).ready( function()
+{
+if($(window).width()<1000)
+	$('#out').hide();
+else
+	$('#out').show();
+});
+	</script>
+	</div>
+</body>
+</html>
