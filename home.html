@@ -1,0 +1,451 @@
+<html>
+<style>
+body
+{
+background-color:#00e8d1;
+background-size:1280px 1280px;
+padding-top:10%;
+padding-left:20%;
+padding-right:20%;
+}
+#content
+{
+overflow:hidden;
+background-color:#f0f0e1;
+<!--margin-top:100px;-->
+width:76%;
+border:0px solid red;
+border-radius:50px;
+	box-shadow:inset 15px 15px 15px 2px rgba(145, 255, 251, 0.3),inset -15px -15px 15px 2px rgba(145, 255, 251, 0.3),inset 3px 3px 3px rgba(145, 255, 251, 0.8),inset -3px -3px 3px rgba(145, 255, 251, 0.8),inset -15px 15px 15px 2px rgba(145, 255, 251, 0.3),inset 15px -15px 15px 2px rgba(145, 255, 251, 0.3),inset -3px 3px 3px rgba(145, 255, 251, 0.8),inset 3px -3px 3px rgba(145, 255, 251, 0.8);
+padding:50px 50px 50px 50px;
+}
+ul{
+list-style-type:none;
+}
+ul li
+{
+margin:30px;
+font-family:'Arial Black';
+font-size:20px;
+height:50px;
+color:black;
+box-shadow:15px 15px 3px rgba(0,0,0,0.3);
+letter-spacing:1px;
+border-radius:25px;
+padding-left:20px;
+text-decoration: none;
+}
+ul li a
+{
+text-decoration:none;
+}
+
+ul li div a
+{
+text-decoration:none;
+position:relative;
+left:-30%;
+}
+ul li div
+{
+position:relative;
+top:-25px;
+left:20%;
+color:red;
+width:inherit;
+text-align:right;
+}
+.button,.buttonedit{
+font-family:"Comic Sans MS";
+    width:190px;
+    height:45px;
+    background-color: #00a2ff;
+	color: white;
+	border-radius:22px;
+	box-shadow:inset 0px -7px 2px #077ca3;
+	outline:none;}
+.button:hover
+{
+position:relative;
+	top:1px;
+	box-shadow:inset 0px -4px 2px #077ca3;
+}
+.button:active
+{
+position:relative;
+	top:3px;
+	box-shadow:inset 0px -0px #077ca3;
+}
+#profile
+{
+border:0px solid white;
+border-radius:100px;
+margin:10%;
+box-shadow:inset 5px 5px 5px 2px rgba(255,255,255, 0.3),inset -5px -5px 5px 2px rgba(255,255,255, 0.3),inset 1px 1px 1px rgba(255,255,255,0.8),inset -1px -1px 1px rgba(255,255,255,0.8),inset -5px 5px 5px 2px rgba(255,255,255, 0.3),inset 5px -5px 5px 2px rgba(255,255,255, 0.3),inset -1px 1px 1px rgba(255,255,255,0.8),inset 1px -1px 1px rgba(255,255,255,0.8);
+width:200px;
+height:200px;
+overflow:hidden;
+}
+#edit
+{
+position:absolute;
+top:0px;
+left:0px;
+margin-left:30%;
+margin-top:10%;
+margin-right:30%;
+width:50%;
+box-shadow:inset 2px 2px 4px black;
+background:white;
+}
+#quote_text
+{
+position:relative;
+left:-90px;
+width:0%;
+height:cover;
+max-height:12%;
+color:purple;
+background-image:linear-gradient(to right,#00e8d1,#00e8d1,#f0f0e1);
+font-family:cursive,Broadway ,Gadget,sans-serif, Florence,"Comic Sans MS",Courier,monospace;
+font-size:30px;
+text-align:center;
+animation-duration:1s;
+animation-iteration-count:1;
+animation-fill-mode:forwards;
+overflow:hidden;
+}
+#goal_text
+{
+position:relative;
+right:-90px;
+font-size:20px;
+width:0%;
+height:cover;
+max-height:10%;
+color:purple;
+font-size:30px;
+background-image:linear-gradient(to left,#00e8d1,#00e8d1,#f0f0e1);
+font-family:cursive,Broadway ,Gadget,sans-serif, Florence,"Comic Sans MS",Courier,monospace;
+text-align:center;
+animation-duration:1s;
+animation-iteration-count:1;
+animation-fill-mode:forwards;
+overflow:hidden;
+}
+#quote p::first-letter
+{
+text-transform:uppercase;
+}
+#username
+{
+position:absolute;
+top:200px;
+right:30%;
+width:15%;
+height:50px;
+text-align:center;
+text-transform:capitalize;
+box-shadow:inset -3px -3px 8px gray,inset 3px -3px 4px gray;
+background-color:white;
+border-radius:25px;
+}
+#quote_pic
+{
+position:relative;
+left:1%;
+animation-name:grow;
+animation-duration:1s;
+animation-iteration-count:infinite;
+animation-fill-mode:forwards;
+}
+#goal_pic
+{
+position:relative;
+left:20%;
+border-radius:90px;
+animation-name:grow;
+animation-duration:1s;
+animation-iteration-count:infinite;
+animation-fill-mode:forwards;
+}
+#task
+{
+background-image:linear-gradient(to bottom,#f0f0e1,#00e8d1,#00e8d1,#00b3db);
+border-radius:0px 0px 30px 30px;
+padding:20px 20px 20px 20px;
+margin:3px 3px 3px 3px ;
+box-shadow:inset -5px -5px 5px 2px rgba(240, 240, 225, 0.5),inset 5px -5px 5px 2px rgba(240, 240, 225, 0.3);
+}
+input,select
+{
+    height:33px;
+    font-size:25px;
+}
+label
+{
+    font-size:30px;
+}
+option
+{
+    height:13px;
+    font-size:10px;
+}
+@keyframes grow
+{
+0%{transform:scale(1)}
+25%{transform:scale(1.07)}
+50%{transform:scale(1)}
+75%{transform:scale(1.07)}
+}
+#add_pic
+{
+position:relative;
+left:30px;
+border:2px solid red;
+border-radius:150px;
+}
+@keyframes trim1{
+0% {width: 50%;padding-right:7%;padding-left:7%;}
+50% {width: 25%;padding-right:5%;padding-left:5%;}
+100% {width: 0%;padding-right:0%;padding-left:0%;}
+}
+@keyframes trim2{
+0% {width: 0%;padding-right:0%;padding-left:0%;}
+50% {width: 25%;padding-right:5%;padding-left:5%;}
+100% {width: 50%;padding-right:7%;padding-left:7%;}
+}
+@keyframes rotate1{
+0% {transform: rotateZ(-90deg);}
+30%{transform:rotateZ(-180deg);}
+100%{transform:rotateZ(-270deg);}
+}
+@keyframes rotate2{
+0% {transform: rotateZ(90deg);}
+30%{transform:rotateZ(180deg);}
+100%{transform:rotateZ(360deg);}
+}
+#q,#g
+    {
+    height:30px;
+    width:90%;
+    background:none;
+	border:0px solid white;
+	border-bottom:4px solid white;
+  	outline:none;
+ 	padding:10px 10px 10px 10px;
+ 	font-family:'Comic Sans MS';
+ 	font-style:italic;
+ 	}
+ 	#edit label
+ 	{
+ 	font-family:'Rock salt';
+ 	font-weight:bolder;
+ 	letter-spacing:2px;
+ 	color:black;
+ 	background-color:red;
+ 	padding:3px 3px 3px 3px;
+ 	padding-left:36px;padding-right:36px;
+ 	border:4px solid #6f86d6;
+ 	background-image:linear-gradient(to right,#48c6ef,#6f86d6);
+ 	}
+ 	#edit #done
+ 	{
+ 	margin:30px;
+font-family:'Arial Black';
+font-size:20px;
+height:50px;
+color:black;
+width:80%;
+box-shadow:15px 15px 3px rgba(0,0,0,0.3),inset 3px 3px 3px 1px rgba(255,255,255, 0.3),inset -3px -3px 3px 1px rgba(255,255,255, 0.3),inset -3px 3px 3px 1px rgba(255,255,255, 0.3),inset 3px -3px 3px 1px rgba(255,255,255, 0.3);
+letter-spacing:1px;
+border-radius:25px;
+background:none;
+text-decoration: none;
+ 	}
+ 	#edit #done:hover
+ 	{
+position:relative;
+top:2px;
+ 	}
+ 	#edit #done:active
+ 	{
+ 	position:relative;
+top:4px;
+ 	}
+ 	#close:hover
+ 	{
+ 	transform:scale(1.1);
+ 	}
+		#edit
+        {
+        z-index:7;
+        box-shadow:0px 0px 20px 5px rgba(0,0,0,0.7);
+        vertical-align:center;
+        margin:50% 25% 25% 25%;
+		background-image:linear-gradient(to bottom,#ff9a9e,#fecfef);
+		border:2px solid white;
+		padding-left:10px;
+		padding-right:10px;
+		border-radius:15px;
+		height:40%;
+        }
+        #close
+        {
+        position:relative;
+        left:95.5%;
+        top:-30px;
+        background-color:black;
+        color:white;
+        width:15px;
+        padding:10px 10px 10px 15px;
+        border:2px solid white;
+        border-radius:30px;
+        }
+        #edit_user
+        {
+        width:30%;
+        text-align:center;
+        padding:5% 5% 5% 5%;
+		background-image:linear-gradient(to bottom,#89f7fe,#66a6ff);
+		border:0px solid white;
+		border-radius:15px;
+		box-shadow:inset 5px 5px 5px 3px rgba(255,255,255, 0.3),inset -5px -5px 5px 3px rgba(255,255,255, 0.3),inset 3px 3px 3px rgba(255,255,255,0.5),inset -3px -3px 3px rgba(255,255,255,0.5),inset -5px 5px 5px 3px rgba(255,255,255, 0.3),inset 5px -5px 5px 3px rgba(255,255,255, 0.3),inset -3px 3px 3px rgba(255,255,255,0.5),inset 3px -3px 3px rgba(255,255,255,0.5);
+		margin-left:30%;
+        }
+
+</style>
+<body>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<div id="content">
+		<div class="c" id="c1"></div><div class="c" id="c2"></div><div class="c" id="c3"></div><div class="c" id="c4"></div><div class="c" id="c5"></div>
+	<div id="head"><div id="profile">
+		<img src='https://i.postimg.cc/qRKKFK4J/Screenshot-2020-05-23-Wix-Logo-Maker.png' id="dp" alt='{{img}}' width="280" height='250' style='position:relative;top:-10px;left:-30px;'></div>
+		<div id="username"><p>{{user}}</p></div></div>
+		<button class="buttonedit" style="position:relative;right:-70%;bottom:100px;" onclick="$('#edit').toggle();">Edit</button>
+		<form action="https://angelfrancis.pythonanywhere.com/edit"  class="edit" method="POST" id="edit">
+					<p onclick="$('#edit').toggle();" id="close">x</p><br><br>
+					<p id="edit_user">{{user}}</p><input style="display:none;" name="username" value="{{user}}"><br><br>
+					<label>Quote</label><br><br><input id='q' name="quoter" value="{{quote}}"><input style="display:none;" name="quote" value="{{quote}}"><br><br>
+					<label>Goal</label><br><br><input id='g'name="goalr" value="{{goal}}"><input style="display:none;" name="goal" value="{{goal}}"><br>
+			<input type="submit" id='done' value="Done">
+				</form>
+		<div id="quote"><p style="float:left;display:inline;" id="quote_text">{{quote}}</p><img src="https://i.postimg.cc/mhfRqb3c/quote.png" id="quote_pic" width='200' onclick="quote();"></div><p class="one" id="quote_sub"></p><br><br>
+		<div id="goal"><p style="float:right;display:inline;" id="goal_text">{{goal}}</p><img src="https://i.postimg.cc/x1VTpPgs/goal1-1.jpg" id="goal_pic" width="230" onclick="goal();" ></div><p class="one" id="goal_sub"></p>
+
+		<div id="add"> <img src="https://i.postimg.cc/QdLvwcRc/add.jpg" onclick="$('#task').slideToggle()" id="add_pic" width="150"></div>
+		<form action="https://angelfrancis.pythonanywhere.com/task" method="POST" id="task">
+			<label for="title">Title</label><br><br>
+			<input id="title" pattern="[^ ]+" title="No white spaces" placeholder="Do not repeat title" name="title" type="text" required><br><br>
+			<label for="url">URL link(option)</label><br><br>
+			<input id="url"  name="url" type="url"><br><br>
+			<label for="due">Due</label><br><br>
+			<input id="due" pattern="/([0-2][0-9]{3})\-([0-1][0-9])\-([0-3][0-9])T([0-5][0-9])\:([0-5][0-9])\:([0-5][0-9])(Z|([\-\+]([0-1][0-9])\:00))/" placeholder="day-month-yearThour:min"  title="Format=00-00-0000T00:00 eg:31-11-2020T17:59" name="due" type="datetime-local" required><br><br>
+			<label for="remainder">Remaind</label><br><br>
+<select id="remainder" name="remainder">
+	<option value="0" selected >On time </option>
+	<option value="5">5 minutes before</option>
+	<option value="15">15 minutes before</option>
+	<option value="30">30 minutes before</option>
+	<option value="1h">1 hour before</option>
+	<option value="2h">2 hours before</option>
+	<option value="1d">1 day before</option>
+	<option value="2d">2 days before</option>
+	<option value="3d">3 days before</option>
+	<option value="7d">1 week before</option>
+</select>
+			<input type="text" style="display:none" name="user"><br><br><br>
+			<input class="button" type="submit" value="add">
+		</form>
+		<ul id="list">
+			{%for i in range(0,ln)%}
+			<li style="background:linear-gradient(to right,{{css1[i]}},{{css2[i]}},{{css3[i]}});"><a href="{{url[i]}}" >{{title[i]}} {{inf[i]}}</a><div>
+				<a style="color:red;font-size:30px;" class="e" href="https://angelfrancis.pythonanywhere.com/remove/{{user}}/{{title[i]}}">x</a></div></li>
+			{%endfor%}
+		</ul>
+		<script>{{e |safe}}</script>
+	<a href="#" id="del" onclick="del();">Delete account</a></div>
+<!--	<div id="extra" style="position:relative;top:-55px;width:76%;padding:50px 50px 50px 50px;height:40px;background-color:red;"></div>-->
+		<script>
+	function goal()
+	{
+if($('#goal_sub').attr('class')=='one')
+{
+$('#goal_sub').attr('class','two');
+$('#goal_pic').css('animation-name','rotate1');
+$('#goal_text').css('animation-name','trim2');
+$('#goal_pic').css('animation-iteration-count','1');
+
+}
+else
+{
+$('#goal_sub').attr('class','one');
+$('#goal_pic').css('animation-name','rotate2');
+$('#goal_text').css('animation-name','trim1');
+$('#goal_pic').css('animation-iteration-count','1');
+
+ }	};
+ function quote()
+	{
+if($('#quote_sub').attr('class')=='one')
+{
+$('#quote_sub').attr('class','two');
+$('#quote_text').css('animation-name','trim2');
+$('#quote_pic').css('animation-iteration-count','1');
+
+}
+else
+{
+$('#quote_sub').attr('class','one');
+$('#quote_text').css('animation-name','trim1');
+$('#quote_pic').css('animation-iteration-count','1');
+
+ }	};
+$(document).ready(function(){
+$('#task').slideUp();
+$('#edit').hide();
+$('input[name="user"]').attr("value",$('#username').text());
+var width=$(window).width();
+var height=$(window).height();
+if($(window).width()<1000){
+$('body').css('padding-right','10%');
+$('body').css('padding-left','10%');}
+else{
+$('#goal_pic').css("left","20%");
+$('body').css('padding-right','20%');
+$('body').css('padding-left','20%');}
+});
+		$(window).resize( function()
+{var width=$(window).width();
+var height=$(window).height();
+if($(window).width()<1000){
+$('body').css('padding-right','10%');
+$('body').css('padding-left','10%');}
+else{
+$('#goal_pic').css("left","20%");
+$('body').css('padding-right','20%');
+$('body').css('padding-left','20%');
+}
+});
+$('input').focus(function()
+{
+$(this).css('box-shadow','1px 1px 9px 2px #00b3db,-1px -1px 9px 2px #00b3db,-1px 1px 9px 2px #00b3db,1px -1px 9px 2px #00b3db');
+});
+$('input').focusout(function()
+{
+$(this).css('box-shadow','');});
+function del()
+{
+    if(confirm('You are about to delete your account')==true)
+    {
+        alert("hello")
+        $('#del').attr('href','https://angelfrancis.pythonanywhere.com/maildelete/{{user}}')
+    }
+};
+function c(){
+$('#content').css("filter","brightness(50%)");
+    $('#edit').css("filter","brightness(100%)")
+}
+</script>
+</body>
+</html>
