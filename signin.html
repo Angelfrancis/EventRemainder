@@ -3,6 +3,8 @@
 <html >
 <head>
 	<title>log in or sign up</title>
+	<link rel="icon" href="https://i.postimg.cc/qRKKFK4J/Screenshot-2020-05-23-Wix-Logo-Maker.png">
+
 	<style>
 
 #fill
@@ -125,10 +127,7 @@ position:absolute;
 }
 body
 {
-	background-image:url('https://i.postimg.cc/hGQhQ6Yt/back2.jpg');
-	background-repeat:no-repeat;
-background-size:cover;
-background-size:1000px 1750px;
+	background-color:#ffe7af;
 padding:10% 10% 10% 10%;
 overflow: auto;
 
@@ -138,6 +137,7 @@ overflow: auto;
 <!--overflow:scroll;-->
 <!--}-->
 	</style>
+	<meta name="google-site-verification" content="UQs1NwNFcZhtehmha8AZVmZJnzmDDANDrr68UT4xD6M" />
 </head>
 <body>
 	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
@@ -194,15 +194,24 @@ $('#submit2').html('SignUp');
 {
 if($(window).width()<1000)
 	$('#out').hide();
-else
+else{
 	$('#out').show();
+// 	$('#fill').attr('style','position: relative;right:10%;top:80px;width:350px;height:400px;background-color: rgba(204, 245, 255,0.4);border:5px double #6e3722;border-radius: 15px;');
+    $('#welcome > img').attr("width","120");
+//     $('.input').attr('style','position:relative;left:10px;');
+    $('style').text('body{		background-color:#ffe7af;	overflow: auto;}#fill{    position: relative;	right:10%;	top:80px;	width:350px;	height:400px;	background-color: rgba(204, 245, 255,0.4);	border:5px double #6e3722;	border-radius: 15px;}#out{position:fixed;top:100px;left:100px;width:400px;height:400px;background-color:black;border:0px solid white;border-radius:200px;}#out img{width:300px;height:300px;position:fixed;top:150px;left:150px;border:0px solid white;border-radius:200px;}#welcome{width:100%;background-color:white;border-radius:10px 10px 0px 0px;text-align:center;}.input{	position:relative;	left:10px;}label{		padding-left: 5px;}input{	border-radius: 10px;	padding-left: 7px;	padding-right: 7px;}#submit{	position:absolute;	top: 370px;	left:10px;    width:100px;    height:25px;    border:1px solid yellow;    background-color: yellow;	color: black;	border-radius:17px;	box-shadow:inset 0px -5px 2px #ffb300;}#submit2{	position:absolute;	top: 370px;	left:130px;    width:100px;    height:25px;    border:1px solid yellow;    background-color: yellow;color: black;	border-radius:17px;	box-shadow:inset 0px -5px 2px #ffb300;}#submit:hover{position:absolute;	top:371px;	box-shadow:inset 0px -3px 2px #ffb300;}#submit:active{position:absolute;	top:373px;	box-shadow:inset 0px -0px #ffb300;#submit2:hover{position:absolute;	top:371px;	box-shadow:inset 0px -3px 2px #ffb300;}#submit2:active{position:absolute;	top:373px;	box-shadow:inset 0px -0px #ffb300;}');
+}
 });
 	$(document).ready( function()
 {
 if($(window).width()<1000)
 	$('#out').hide();
-else
+else{
 	$('#out').show();
+	    $('#welcome > img').attr("width","120");
+
+    $('style').text('body{		background-color:#ffe7af;	overflow: auto;}#fill{    position: relative;	right:10%;	top:80px;	width:350px;	height:400px;	background-color: rgba(204, 245, 255,0.4);	border:5px double #6e3722;	border-radius: 15px;}#out{position:fixed;top:100px;left:100px;width:400px;height:400px;background-color:black;border:0px solid white;border-radius:200px;}#out img{width:300px;height:300px;position:fixed;top:150px;left:150px;border:0px solid white;border-radius:200px;}#welcome{width:100%;background-color:white;border-radius:10px 10px 0px 0px;text-align:center;}.input{	position:relative;	left:10px;}label{		padding-left: 5px;}input{	border-radius: 10px;	padding-left: 7px;	padding-right: 7px;}#submit{	position:absolute;	top: 370px;	left:10px;    width:100px;    height:25px;    border:1px solid yellow;    background-color: yellow;	color: black;	border-radius:17px;	box-shadow:inset 0px -5px 2px #ffb300;}#submit2{	position:absolute;	top: 370px;	left:130px;    width:100px;    height:25px;    border:1px solid yellow;    background-color: yellow;color: black;	border-radius:17px;	box-shadow:inset 0px -5px 2px #ffb300;}#submit:hover{position:absolute;	top:371px;	box-shadow:inset 0px -3px 2px #ffb300;}#submit:active{position:absolute;	top:373px;	box-shadow:inset 0px -0px #ffb300;#submit2:hover{position:absolute;	top:371px;	box-shadow:inset 0px -3px 2px #ffb300;}#submit2:active{position:absolute;	top:373px;	box-shadow:inset 0px -0px #ffb300;}');
+}
 });
 	</script>
 	</div>
