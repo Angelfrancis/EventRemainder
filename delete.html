@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://i.postimg.cc/qRKKFK4J/Screenshot-2020-05-23-Wix-Logo-Maker.png">
+
+    <meta charset="UTF-8">
+    <title>Delete account</title>
+    <style>
+    body
+    {
+    background-image:url('https://freefrontend.com/assets/img/css-background-patterns/underwater-css-pattern.png');
+    background-size:100% 100%;
+    }
+    #edit input
+    {
+    height:30px;
+    width:90%;
+    background:none;
+	border:0px solid white;
+	border-bottom:4px solid white;
+  	outline:none;
+ 	padding:10px 10px 10px 10px;
+ 	font-family:'Comic Sans MS';
+ 	font-style:italic;
+ 	}
+ 	#edit label
+ 	{
+ 	font-family:'Rock salt';
+ 	font-weight:bolder;
+ 	letter-spacing:2px;
+ 	color:black;
+ 	background-color:red;
+ 	padding:3px 3px 3px 3px;
+ 	padding-left:36px;padding-right:36px;
+ 	border:4px solid #6f86d6;
+ 	background-image:linear-gradient(to right,#48c6ef,#6f86d6);
+ 	}
+ 	#edit #done
+ 	{
+ 	margin:30px;
+font-family:'Arial Black';
+font-size:20px;
+height:50px;
+color:black;
+box-shadow:15px 15px 3px rgba(0,0,0,0.3),inset 3px 3px 3px 1px rgba(255,255,255, 0.3),inset -3px -3px 3px 1px rgba(255,255,255, 0.3),inset -3px 3px 3px 1px rgba(255,255,255, 0.3),inset 3px -3px 3px 1px rgba(255,255,255, 0.3);
+letter-spacing:1px;
+border-radius:25px;
+text-decoration: none;
+ 	}
+ 	#edit #done:hover
+ 	{
+position:relative;
+top:2px;
+ 	}
+ 	#edit #done:active
+ 	{
+ 	position:relative;
+top:4px;
+ 	}
+ 	#close:hover
+ 	{
+ 	transform:scale(1.1);
+ 	}
+		#edit
+        {
+        box-shadow:0px 0px 20px 5px rgba(0,0,0,0.7);
+        vertical-align:center;
+        margin:50% 25% 25% 25%;
+		background-image:linear-gradient(to bottom,#ff9a9e,#fecfef);
+		border:2px solid white;
+		padding-left:10px;
+		padding-right:10px;
+		border-radius:15px;
+        }
+        #close
+        {
+        position:relative;
+        left:95.5%;
+        top:-30px;
+        background-color:white;
+        color:white;
+        border:2px solid white;
+        border-radius:30px;
+        }
+        #edit_user
+        {
+        width:30%;
+        text-align:center;
+        padding:5% 5% 5% 5%;
+		background-image:linear-gradient(to bottom,#89f7fe,#66a6ff);
+		border:0px solid white;
+		border-radius:15px;
+		box-shadow:inset 5px 5px 5px 3px rgba(255,255,255, 0.3),inset -5px -5px 5px 3px rgba(255,255,255, 0.3),inset 3px 3px 3px rgba(255,255,255,0.5),inset -3px -3px 3px rgba(255,255,255,0.5),inset -5px 5px 5px 3px rgba(255,255,255, 0.3),inset 5px -5px 5px 3px rgba(255,255,255, 0.3),inset -3px 3px 3px rgba(255,255,255,0.5),inset 3px -3px 3px rgba(255,255,255,0.5);
+		margin-left:30%;
+        }
+
+    </style>
+</head>
+<body>
+<form action="https://angelfrancis.pythonanywhere.com/delete_fill" method="POST" id="edit">
+					<p onclick="" id="clsose" title="close"><img id="close" width="50" height="50"src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdPRA-r5JIPCLkNnS7ZXKa6GT8SgZT6qSTrtPlyB_d4t7rxJDK&usqp=CAU"><br><br>
+					<p id="edit_user">{{user}}</p><input style="display:none;" name="username" value="{{user}}"><br><br>
+					<label>Password</label><br><br><input type="password" name="password" ><br><br>
+			<input type="submit" id="done" value="Delete">
+				</form>
+				<script>{{e | safe}}</script>
+</body>
+</html>
